@@ -39,14 +39,14 @@ Currently, only the `/profile` route is enabled for deep linking with the follow
 
 | Parameter | Description |
 |-----------|-------------|
-| `userId` | User identifier |
+| `user-id` | User identifier |
 | `name` | User display name |
 | `tab` | Active tab to display |
 
 **Example URLs:**
 ```
-deeplinkdemo://profile?userId=123&name=John&tab=activity
-https://deeplinkdemo.example.com/profile?userId=123&name=John
+deeplinkdemo://profile?user-id=123&name=John&tab=activity
+https://deeplinkdemo.example.com/profile?user-id=123&name=John&tab=activity
 ```
 
 ## Getting Started
@@ -87,12 +87,12 @@ Using ADB:
 ```bash
 # Custom URL scheme
 adb shell am start -a android.intent.action.VIEW \
-  -d "deeplinkdemo://profile?userId=123&name=John" \
+  -d "deeplinkdemo://profile?user-id=123&name=John&tab=activity" \
   com.example.flutter_gorouter_app
 
 # HTTPS link
 adb shell am start -a android.intent.action.VIEW \
-  -d "https://deeplinkdemo.example.com/profile?userId=456&name=Jane" \
+  -d "https://deeplinkdemo.example.com/profile?user-id=456&name=Jane&tab=activity" \
   com.example.flutter_gorouter_app
 ```
 
@@ -100,7 +100,7 @@ adb shell am start -a android.intent.action.VIEW \
 
 Using xcrun (Simulator):
 ```bash
-xcrun simctl openurl booted "deeplinkdemo://profile?userId=123&name=John"
+xcrun simctl openurl booted "deeplinkdemo://profile?user-id=123&name=John&tab=activity"
 ```
 
 ## Dependencies
