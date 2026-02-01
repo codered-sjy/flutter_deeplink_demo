@@ -1,0 +1,23 @@
+name: flutter_deeplink_demo
+description: "Flutter deep linking demo with GoRouter typed routes."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  go_router: ^17.0.0
+  app_links: ^6.4.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  build_runner: ^2.10.5
+  go_router_builder: ^4.1.2
+
+flutter:
+  uses-material-design: true
